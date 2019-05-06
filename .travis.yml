@@ -6,10 +6,10 @@ before_install:
 script:
   - docker run test-client npm test -- --coverage
 after_success:
-  - docker build -t succulentpup/client ./client
-  - docker build -t succulentpup/worker  ./worker
-  - docker build -t succulentpup/server  ./server
-  - docker build -t succulentpup/nginx  ./nginx
+  - docker build -t civilbots/client ./client
+  - docker build -t civilbots/worker  ./worker
+  - docker build -t civilbots/server  ./server
+  - docker build -t civilbots/nginx  ./nginx
   # login to docker
   - echo "DOCKER_PASSWORD" | docker login -u "DOCKER_ID"  --password-stdin
   # push to dockerhub
