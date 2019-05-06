@@ -11,7 +11,7 @@ after_success:
   - docker build -t civilbots/server  ./server
   - docker build -t civilbots/nginx  ./nginx
   # login to docker
-  - echo "DOCKER_PASSWORD" | docker login -u "DOCKER_ID"  --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID"  --password-stdin
   # push to dockerhub
   - docker push civilbots/client
   - docker push civilbots/worker
