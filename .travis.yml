@@ -13,7 +13,7 @@ after_success:
   # login to docker
   - echo "DOCKER_PASSWORD" | docker login -u "DOCKER_ID"  --password-stdin
   # push to dockerhub
-  - docker push succulent/client
-  - docker push succulent/worker
-  - docker push succulent/server
-  - docker push succulent/nginx
+  - docker push civilbots/client
+  - docker push civilbots/worker
+  - docker push civilbots/server
+  - docker push civilbots/nginx
