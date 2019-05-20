@@ -20,7 +20,7 @@ after_success:
 deploy:
   provider: elasticbeanstalk
   region: us-east-2
-  app: multi-container
+  app: multi-conainer
   env: MultiConainer-env
   bucket_name: elasticbeanstalk-us-east-2-442287029366
   bucket_path: container-multi
